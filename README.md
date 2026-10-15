@@ -1,7 +1,7 @@
 ## Introduction
+## it is DEV branch
 
-
-<b>Discipline | <b>Mini Project
+<b>Discipline | <b>IT
 :--|:--|
 <b> Lab | <b> Virtual Lab
 <b> Experiment|     <b> Measure of attenuation and bending 
