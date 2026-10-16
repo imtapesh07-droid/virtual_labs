@@ -21,5 +21,5 @@ Fill a brief description of this experiment here
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 |Tapesh Nandan|Student |I.T. | . |imtapesh07@gmail.com
+1 |Tapesh Nandan|Student |I.T. |REC Banda |imtapesh07@gmail.com
 2 | . | . | . | . | .
