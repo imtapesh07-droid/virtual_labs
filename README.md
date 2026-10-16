@@ -4,8 +4,8 @@
 <b>Discipline | <b>Mini Project
 :--|:--|
 <b> Lab | <b> Virtual Lab
-<b> Experiment|     <b>  
-Impulse flashover testing on Porcelain vs Polymeric Post Insulators
+<b> Experiment|     <b>Impulse flashover testing on Porcelain vs Polymeric Post Insulators
+
 
 ### About the Experiment 
 
