@@ -1,13 +1,73 @@
+
+</html>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impulse Flashover Test: Porcelain vs Polymeric Post Insulators</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-		<!-- Your code goes here-->
+<h1>Virtual Lab: Lightning Impulse (1.2/50 &micro;s) Flashover Test on Post Insulators</h1>
+<div class="wrap">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+  <div class="panel controls">
+    <label>Insulator type</label>
+    <select id="type">
+      <option value="porcelain">Porcelain post insulator</option>
+      <option value="polymeric">Polymeric (silicone rubber) post insulator</option>
+    </select>
+
+    <label>Arcing distance (mm)</label>
+    <input type="number" id="arc" value="900" min="300" max="2500" step="50">
+
+    <label>Polarity</label>
+    <select id="pol"><option value="1">Positive</option><option value="-1">Negative</option></select>
+
+    <label>Surface condition</label>
+    <select id="cond">
+      <option value="dry">Dry &amp; clean</option>
+      <option value="wet">Wet (rain)</option>
+      <option value="pollute">Polluted</option>
+    </select>
+
+    <label>Applied peak voltage: <span id="vlbl">500</span> kV</label>
+    <input type="range" id="volt" min="200" max="900" step="5" value="500">
+
+    <button id="shot">Apply Impulse</button>
+    <button id="uad">Auto Up-and-Down (U50)</button>
+    <button id="prob">Probability Curve</button>
+    <button class="alt" id="reset">Reset</button>
+
+    <div id="status"></div>
+    <div class="note">Educational model: U50 = k &middot; L<sub>arc</sub>, with k depending on material, polarity and
+    surface condition; breakdown probability is normally distributed (&sigma; = 3 % of U50). Constants are
+    illustrative; replace them with your lab-manual values.</div>
+  </div>
+
+  <div class="plots">
+    <div class="panel">
+      <b>Oscillogram (voltage vs time)</b>
+      <canvas id="wave" width="760" height="300"></canvas>
+    </div>
+    <div class="panel gap">
+      <b>Flashover probability vs applied voltage</b>
+      <canvas id="pcv" width="760" height="260"></canvas>
+    </div>
+    <div class="panel gap">
+      <b>Observation table</b>
+      <div class="tblbox">
+        <table id="tbl">
+          <thead><tr><th>#</th><th>Type</th><th>Polarity</th><th>Condition</th><th>Vp (kV)</th><th>Result</th><th>t<sub>chop</sub> (&micro;s)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="summary"></div>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
